@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--android:fillAfter="true": thuộc tính trong thẻ mở; sau khi chạy xong, lưu giữ lại trạng thái của hình;
+nếu có thuộc tính này vào, thì ta phải để cho repeatCount = "2" - giá trị cố định, thì nó mới có thể dừng rồi
+xem trạng thái dừng là ntn đc-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!--độ trong suốt của ảnh trong alpha giao động từ 0 đến 1. 0 là ko thấy gì cả, 1 là rõ nét-->
+
+    <!--android:repeatCount: thuộc tính lặp lại; nếu = 1 thì 1 lần chạy bt + 1 lần lặp lại.
+    nếu = "infinite" lặp đi lặp lại không ngừng.-->
+
+    <!--android:repeatMode: kiểu hiệu ứng; nếu giá trị = "reverse": sáng mờ, rồi mờ lần nữa xong mới tới sáng lại;
+    nếu = "restart": sáng, mờ rồi lại sáng mờ, sẽ bị giật-->
+
+    <!--android:duration: thuộc tính quy định thời gian chạy của hiệu ứng alpha, tính theo milis-->
+
+    <alpha android:fromAlpha = "1.0"
+        android:toAlpha = "0.1"
+        android:repeatCount = "2"
+        android:repeatMode = "reverse"
+        android:duration = "2000">
+    </alpha>
+
+</set>

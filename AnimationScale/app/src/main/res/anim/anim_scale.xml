@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--zoom/phóng to, thu nhỏ hình ra bao nhiêu-->
+
+<!--android:fillAfter="true": giữ lại kết quả sau khi zoom xong-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!--...XScale và ...YScale: 4 thuộc tính chỉ phóng to từ mấy lần lên mấy lần;
+    và phóng theo chiều ngang của hình X, hay theo chiều dọc của hình Y-->
+
+    <!--android:pivotX="50%"    Thuộc tính chỉ ra tọa độ tâm zoom của hình
+        android:pivotY="50%"-->
+
+    <!--android:duration="2000": mỗi lần scale mất 2 giây, tính theo milis-->
+
+    <!--<scale android:fromXScale="1.0"
+        android:toXScale="2.0"
+
+        android:fromYScale="1"
+        android:toYScale="2"
+
+        android:pivotX="50%"
+        android:pivotY="50%"
+
+        android:duration="2000">
+
+    </scale>-->
+
+
+
+
+    <!--THU NHỎ LẠI(nên kéo hình cho to ra trước khi thu): Thu về nhỏ nhất to=0 thì hình mất luôn-->
+    <scale android:fromXScale="1"
+        android:toXScale="0"
+
+        android:fromYScale="1"
+        android:toYScale="0"
+
+        android:pivotX="50%"
+        android:pivotY="50%"
+
+        android:duration="4000">
+
+    </scale>
+
+
+
+</set>

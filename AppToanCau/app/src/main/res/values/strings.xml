@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">App ToanCau</string>
+    <string name="text_TieuDe">Information Form</string>
+    <string name="hint_HoTen">Input Full Name</string>
+    <string name="hint_Email">Input Email</string>
+    <string name="hint_SoDienThoai">Input Phone Number</string>
+    <string name="text_XacNhan">Confirm</string>
+    <string name="text_ChaoBan">Hello</string>
+    <string name="text_Email" translatable="false">Email</string>
+    <string name="text_SoDT">Phone Number</string>
+
+
+</resources>

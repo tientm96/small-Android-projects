@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--từ ngoài đi vào, nên -100: nghĩa là 100% từ bên ngoài vào; 0% đi ra-->
+    <translate android:fromXDelta="-100%"
+        android:toXDelta="0%"
+        android:duration="500">
+    </translate>
+
+    <!--đi vào ta muốn màn hình vào hiện lên từ từ-->
+    <alpha android:fromAlpha="0.3"
+        android:toAlpha="1"
+        android:duration="500">
+    </alpha>
+
+
+
+</set>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "450436854075",
+    "firebase_url": "https://authenticationdangkythanhvien.firebaseio.com",
+    "project_id": "authenticationdangkythanhvien",
+    "storage_bucket": "authenticationdangkythanhvien.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450436854075:android:656e758085baa8d7",
+        "android_client_info": {
+          "package_name": "com.example.mtit.newfirebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450436854075-ld423g1tnoi8c1o9joni5qit639joot1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDsnBv_Wdx-Fpj6PqTxaGtvT_5h4zsvTc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

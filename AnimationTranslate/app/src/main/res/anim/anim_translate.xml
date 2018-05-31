@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Dịch chuyển hình ảnh khi kích vào-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--android:fromXDelta="0"  Dịch chuyển theo chiều ngang X; dịch ngang từ vị trí 0 sang 300
+        android:toXDelta="300"-->
+    <!--android:fromYDelta="0"  Dịch chuyển theo chiều dọc Y; dịch dọc từ vị trí 0 đến 300
+        android:toYDelta="300"-->
+    <!--NẾU VỪA DỊCH NGANG VÀ VỪA DỊCH DỌC ==>> THÀNH DỊCH XÉO.-->
+
+    <!--android:duration="2000": Thời gian thực hiện dịch là 2 giây, tính theo milis-->
+    <!--android:startOffset="2000": Đợi sau 2 giây mới bắt đầu đi chuyển. Dùng để kết hợp trong việc di chuyển
+    theo nhiều hướng.
+    VD: hướng 1 di chuyển thì hướng 2,3,4 phải đợi-->
+    <!--XEM TIẾP BÀI TẬP DI CHUYỂN NHIỀU HƯỚNG TRONG PROJECT 2-->
+
+    <translate android:fromXDelta="0"
+        android:toXDelta="300"
+        android:fromYDelta="0"
+        android:toYDelta="300"
+
+        android:startOffset="2000"
+        android:duration="2000">
+
+    </translate>
+
+
+</set>

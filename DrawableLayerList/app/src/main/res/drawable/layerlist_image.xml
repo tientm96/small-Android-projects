@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <bitmap android:src="@drawable/orange"
+            android:gravity="center"></bitmap>
+    </item>
+
+    <item android:top="400dp" android:left="500dp">
+        <bitmap android:src="@drawable/apple_taodo"
+            android:gravity="center"></bitmap>
+    </item>
+
+    <item android:bottom="400dp" android:right="500dp">
+        <bitmap android:src="@drawable/kiwigreen_quakiwixanh"
+            android:gravity="center"></bitmap>
+    </item>
+
+</layer-list>

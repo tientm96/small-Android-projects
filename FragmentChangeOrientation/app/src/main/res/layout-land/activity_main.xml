@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="horizontal"
+    android:weightSum="10"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Xem giải thích rõ  hơn trong bài 170 trong vở.
+    **Ta đặt activity_main.xml trùng tên, nhưng với chiều ngang.
+        +Android nếu mh dọc thì sẽ sử dụng activity_main(cũ).
+        +Android nếu mh ngang thì sẽ sử dụng activity_main(land).
+      Khi tạo layout ngang, nhớ chú ý kích >> với thuộc tính Orientation;
+          và chọn landscape trong Screen sau khi next.-->
+
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.mtit.minhtien.fragmentchangeorientation.FragmentStudentList"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4" />
+
+    <!--Vì ở đây ta chia tỉ lệ weightSum 4:6 theo chiều ngang.
+            Nên chiều ngang của cả 2 phần đều: layout_width = 0dp.
+            Khi đó chiều ngang sẽ được chia theo weightSum mà ko bị vướng
+        Còn nếu chia weight theo chiều dọc (height), thì chiều dọc của cả
+            2 phần phải  = 0dp-->
+
+    <fragment
+        android:id="@+id/fragmentInfo"
+        android:name="com.mtit.minhtien.fragmentchangeorientation.FragmentStudentInfo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6" />
+</LinearLayout>

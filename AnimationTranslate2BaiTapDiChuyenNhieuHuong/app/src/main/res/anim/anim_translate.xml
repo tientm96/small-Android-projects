@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:fillAfter="true": Lưu giữ lại vị trí sau mỗi lần dịch chuyển bằng 1 thẻ translate-->
+
+<!--Dịch theo sơ đồ sau: 1=============>   2 (xuống)
+                                      =^   ||
+                                   =       ||
+                              =            ||
+                         4 =               ||
+                         <=============3   V
+-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <!--Nói trong phần 1......-->
+
+    <!--android:startOffset="2000": Đợi sau 2 giây mới bắt đầu đi chuyển. Dùng để kết hợp trong việc di chuyển
+    theo nhiều hướng.
+    VD: hướng 1 di chuyển mất 2s thì hướng 2 phải đợi 2 giây sau(khi đó 1 dịch xong r) mới bắt đầu di chuyển-->
+
+    <!--Dịch ngang từ trái qua phải-->
+    <translate android:fromXDelta="0"
+        android:toXDelta="450"
+        android:duration="2000">
+    </translate>
+
+    <!--Tiếp tục tại trí vừa dịch ngang xong. Ta dịch thẳng từ trên xuống-->
+    <translate android:startOffset="2000"
+        android:fromYDelta="0"
+        android:toYDelta="700"
+        android:duration="2000">
+    </translate>
+
+    <!--Dịch ngang từ phải về trái. Từ vị trí hiện tại: 0, đi ngược => -450-->
+    <translate android:startOffset="4000"
+        android:fromXDelta="0"
+        android:toXDelta="-450"
+        android:duration="2000">
+    </translate>
+
+    <!--Dịch xéo: từ dưới lên + từ trái qua. Vì dưới lên nên -700-->
+    <translate android:startOffset="6000"
+        android:fromXDelta="0"
+        android:toXDelta="450"
+        android:fromYDelta="0"
+        android:toYDelta="-700"
+
+        android:duration="2000">
+    </translate>
+
+</set>

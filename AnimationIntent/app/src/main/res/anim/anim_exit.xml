@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--đang đứng đó rồi đi ra ngoài, nghĩa là: 0% từ bên ngoài vào; 100% đi ra-->
+    <translate android:fromXDelta="0%"
+        android:toXDelta="100%"
+        android:duration="500">
+    </translate>
+
+    <!--Màn hình ra: Trong lúc nó vừa đi ra thì ta cho nó mờ mờ xuống-->
+    <alpha android:fromAlpha="1"
+        android:toAlpha="0.1"
+        android:duration="500">
+    </alpha>
+
+
+</set>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@drawable/bacground"
+    android:orientation="vertical"
+    android:weightSum="10"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtit.minhtien.nodejssocketio_createappchat.MainActivity">
+
+
+    <!--Vì xét tỉ lệ theo chiều cao(từ trên xuống),
+     nên chiều cao sẽ là 0dp, để tránh xung đột-->
+    <ListView
+        android:id="@+id/listViewUser"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </ListView>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:textColor="#ff0"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:text="Nội dung chat: "
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <ListView
+        android:id="@+id/listviewChat"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <!--Trong LinearLayout con này ta xét tỉ lệ theo
+        chiều ngang (từ trái qua). Nên chiều ngang sẽ để
+        là 0dp, để tránh xung đột.-->
+        <EditText
+            android:id="@+id/editTextContent"
+            android:layout_marginLeft="5dp"
+            android:hint="Input here"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+
+        <!--ImageButton: nhớ scaleType = "fitXY" để canh
+                            đúng tỉ lệ ảnh.
+        và background="@null": để bỏ đi khoảng trống nền ảnh.                -->
+        <ImageButton
+            android:id="@+id/imagebuttonAddUser"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/adduser"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imagebuttonSendMess"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/send"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mtit.minhtien.googlemapapi">
+
+
+    <!--Xin quyền map cho dòng code map.setMyLocationEnabled(true);-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+
+        <!--
+        ***Để add Key vào. Sau khi copy key vào string.xml của mục values.
+                Thì Add key đã copy vào string.xml đó vào Project ta phải có lệnh trong manifest.
+
+        ***Search "google map android api" -> Chọn link của deverlopers...->chọn GUIDES->Get API Key
+                -> kéo xuống mục Step 2. Add the API key to your application: sẽ có đoạn code cần add vào
+                        thẻ <application> của manifest, copy và đưa về.
+
+                    +Sau khi paste code, thay value = "string.xml, nơi chứa API Key lúc đầu add vào ở B1"
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key"/>
+
+
+
+
+
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

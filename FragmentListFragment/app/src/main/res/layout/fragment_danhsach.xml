@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--/*Vì ở .java ta extends ListFragment. Nên để tương thích ta phải đặt id bằng id có sẵn cho listView trong .xml.
+ *           Khi đó class extends ListFragment mới chịu hiểu trong xml là list.
+ *           Nếu đặt listView trong xml là id bình thường, thì lớp extends ListFragment sẽ ko chịu hiểu đó là list.
+ *
+ *      Vì đã dùng extends ListFragment, và xml ta đặt id có sẵn, nên trong java không cần ánh xạ, thông qua
+ *          ListFragment sẽ tự tìm thấy listView*/-->
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ListView>
+
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtit.minhtien.fragmentremove.MainActivity">
+
+
+    <!--/*- Ở đây ta ko làm theo cách ánh xạ rồi mới xét sự kiện (làm cũng đc), mà làm theo cách xét sự kiện với xml.
+     * - Tương tự bài 161:
+     *       + Ở file xml: ta mở thuộc tính <Button onClick = "AAAA"...>
+     *       + Ở file java: ta tạo phương thức public void AAAA(phải trùng text ở trên).
+     *                      Chỉ code hàm thôi, ko cần phải gọi hàm đó ra bằng 1 đối tượng nào cả.
+     *      Khi đó, ta kích vào btn, thì .xml sẽ thực thi lệnh onClick bằng cách gọi về hàm tự tạo trong .java
+     *              bằng tên trùng tên với text của nó.
+     *      Khi đó sự kiện btn sẽ được gọi theo một cách mới.*/-->
+
+    <Button
+        android:onClick="AddA"
+        android:id="@+id/buttonAddA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Add A"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="AddB"
+        android:id="@+id/buttonAddB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/buttonAddA"
+        android:text="Add B"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="AddC"
+        android:id="@+id/buttonAddC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonAddB"
+        android:layout_toEndOf="@+id/buttonAddB"
+        android:text="Add C"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="Back"
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="Back"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="RemoveA"
+        android:id="@+id/buttonRemoveA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonAddA"
+        android:text="Remove A"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="RemoveB"
+        android:id="@+id/buttonRemoveB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonAddB"
+        android:layout_toEndOf="@+id/buttonAddA"
+        android:text="Remove B"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="RemoveC"
+        android:id="@+id/buttonRemoveC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonRemoveB"
+        android:layout_toEndOf="@+id/buttonAddB"
+        android:text="Remove C"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="PopA"
+        android:id="@+id/buttonPopA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/buttonBack"
+        android:layout_below="@+id/buttonBack"
+        android:text="Pop A"
+        tools:ignore="OnClick" />
+
+    <FrameLayout
+        android:id="@+id/frameContent"
+        android:layout_below="@+id/buttonRemoveA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+
+</RelativeLayout>

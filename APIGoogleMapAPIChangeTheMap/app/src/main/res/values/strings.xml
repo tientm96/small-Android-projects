@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">APIGoogleMapAPI-ChangeTheMap</string>
+
+    <!--Ta ko đưa trực tiếp API_Key vào trong .java, mà đưa vào đây.-->
+    <string name="map_api_key">AIzaSyCMt149xxv9xNMQDioV88Bry2C-YPA2B3Y</string>
+
+</resources>

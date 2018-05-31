@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:weightSum="10"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--2-3-4-1 Chia tỉ lệ dọc horizontal-->
+    <!--Chèn thêm các LinerLayout con vào-->
+
+    <LinearLayout
+        android:layout_weight="2"
+
+        android:orientation="vertical"
+        android:background="#ff0"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:background="#efefa6"
+            android:text="1"
+            android:textSize="60sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:background="#9f9f09"
+            android:text="2"
+            android:textSize="60sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="3"
+
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:background="#d36bf5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="3"
+
+            android:gravity="center"
+            android:background="#e0bbf2"
+            android:textSize="60sp"
+            android:text="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_weight="4"
+
+            android:gravity="center"
+            android:background="#a337d4"
+            android:textSize="60sp"
+            android:text="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_weight="3"
+
+            android:gravity="center"
+            android:background="#de7ff5"
+            android:textSize="60sp"
+            android:text="5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="4"
+
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:background="#e9ed6713"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="8"
+
+            android:gravity="center"
+            android:background="#ffc680"
+            android:textSize="60sp"
+            android:text="6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_weight="2"
+
+            android:gravity="center"
+            android:background="#f17108"
+            android:textSize="60sp"
+            android:text="7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="10"
+
+        android:background="#2a1dba"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="10"
+
+            android:gravity="center"
+            android:background="#b9ceef"
+            android:textSize="60sp"
+            android:text="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

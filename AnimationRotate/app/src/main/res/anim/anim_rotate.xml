@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Nếu có TH quay 360 độ, thì sau mỗi lần xoay nó dừng lại 1 tý, để xử lý quay mượt hơn thì:
+ta thêm 1 dòng interpolator vào <set>:
+        <set xmlns:android="http://schemas.android.com/apk/res/android"
+            android:interpolator="@android:anim/linear_interpolator">
+-->
+
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--android:fromDegrees="0": bắt đầu từ góc 0 độ-->
+
+    <!--android:toDegrees="90": tới 90 độ, mặc định là xoay qua bên trái nếu ko nói gì-->
+
+    <!--android:pivotX và android:pivotY: tọa độ (vị trí theo chiều ngang, chiều dọc): tọa độ của tâm quay
+    VD: android:pivotX="50%" chiều ngang thì tâm quay nằm ở chính giữa hình
+        android:pivotY="10%" chiều dọc thì tâm quay nằm gần trên cùng của hình, nếu 0% thì mới trên cùng.-->
+
+    <!--android:duration="2000": 2 giây cho mỗi lần xoay, tính theo milis-->
+
+    <!--android:repeatCount="infinite": số lần lặp lại, ở đây lặp liên tục, nếu để = n thì lặp n+1 lần.-->
+
+    <!--android:repeatMode="reverse": kiểu lặp A -> B và B -> A, chu kỳ qua lại nên không bị giật;
+     nếu = "restart" thì A->B và A->B cứ A->B thôi, chu kỳ 1 chiều nên sẽ bị giật-->
+
+    <rotate android:fromDegrees="30"
+        android:toDegrees="-30"
+        android:pivotX="50%"
+        android:pivotY="10%"
+
+        android:duration="1000"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse">
+    </rotate>
+
+</set>

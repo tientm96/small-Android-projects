@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="horizontal"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtit.minhtien.api_youtubeapi.MainActivity">
+
+
+    <!--Mở thẻ khung play youtube:
+    Để play video ta mở thẻ <Youtube và chọn dòng thư việncủa YoutubePlayerView-->
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/myYouTube"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.google.android.youtube.player.YouTubePlayerView>
+
+
+</LinearLayout>

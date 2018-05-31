@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="#f2b543"
+    tools:context="com.mtit.minhtien.fragmentaddbycodejavareplace.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:text="Hello World!"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameContent"
+        android:layout_width="330dp"
+        android:layout_height="323dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </FrameLayout>
+
+
+    <!--/*- Vì hàm .commit() chỉ được gọi 1 lần trong activity, nên sẽ không thể gọi qua lại nhiều fragment được.
+     *
+     * - Giải pháp: Lệnh gọi hàm từ .xml gọi đến hàm trong .java:
+     *    +B1: trong main.xml, tại mỗi <button > ta để thuộc tính onClick="AddFragmentAAA"
+     *         thuộc tính này có tác dụng gọi đến hàm "AddFragmentAAA()" trong main.java khi ta click button;
+     *       "Tên hàm" cần gọi đến trong main.xml, phải trùng với tên hàm được gọi trong main.java, thì mới gọi được.
+     *
+     *    +B2: Vào main.java để tạo hàm AddFragmentAAA(); trùng tên với onClick="AddFragmentAAA"
+     *         Vì hàm này đc chạy dựa trên việc gọi đến hàm bằng thuộc tính onClick trong xml, bằng việc nhấn button;
+     *              nên ở main.java nó chỉ cần viết nd hàm thôi, chứ không cần gọi đến nó qua đối tượng nào cả.
+     **/
+    -->
+
+    <Button
+        android:onClick="AddFragmentAAA"
+        android:id="@+id/buttonAddA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:text="Add Fragment A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="AddFragmentAAA"
+        android:id="@+id/buttonAddB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="28dp"
+        android:text="Add Fragment B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="OnClick" />
+
+</android.support.constraint.ConstraintLayout>
